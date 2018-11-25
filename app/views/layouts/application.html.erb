@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Motorsport</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">Revenue report</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to root_path, class: 'nav-link' do %>
+              Main Page <span class="sr-only">(current)</span>
+            <% end %>
+          </li>        
+          <li class="nav-item">
+            <%= link_to admin_products_path, class: 'nav-link' do %>
+              Products <span class="sr-only">(current)</span>
+            <% end %>
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+  </header>
+    
+  <div id="errors_flash_js">
+    <%= render :partial => "layouts/errors_flash_js" %>
+  </div>
+
+  <main role="main" class="container-fluid pl-5 pr-5 pt-5">  
+    <%= yield %> 
+  </main>
+</html>

@@ -1,0 +1,22 @@
+<table class="table table-striped table-bordered flex-grow-1 mt-2 text-center justify-content-center">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Revenue</th>
+    </tr>
+  </thead>
+  <% if defined?(result) && result %>
+    <tbody>
+      <% result[:goods].each do |line| %>
+        <tr>
+          <td><%= line['title'] %></td>
+          <td><%= line['revenue'] %></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td><%= 'Total' %></td>
+        <td><%= result[:total_revenue] %></td>
+      </tr>      
+    </tbody>
+  <% end %>
+</table>

@@ -1,0 +1,11 @@
+<% unless flash.now[:notice].blank? %>
+  <div id="notice" class="alert alert-primary mt-5" role="alert">
+    <%= flash.now[:notice] %>
+  </div>
+<% end %>
+
+<% unless flash.now[:alert].blank? %>
+  <div class="alert alert-danger mt-5" role="alert">
+    <%= flash.now[:alert] %>
+  </div>
+<% end %>

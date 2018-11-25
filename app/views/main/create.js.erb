@@ -1,0 +1,5 @@
+var revenue_table = "<%= escape_javascript render :partial => "table", locals: {result: @result} %>";
+document.getElementById('revenue_table').innerHTML = revenue_table;
+
+var errors_flash_js = "<%= escape_javascript render partial: "layouts/errors_flash_js" %>"
+document.getElementById('errors_flash_js').innerHTML = errors_flash_js;
